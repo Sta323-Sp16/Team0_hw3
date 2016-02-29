@@ -18,4 +18,6 @@ for(i in seq_along(hotel_page))
 {
   cat("Downloading", hotel_page[i], "...\n")
   download.file(hotel_links[i], file.path(save_dir,hotel_page[i]),quiet = TRUE)
+  if(i > 10)
+    break
 }
