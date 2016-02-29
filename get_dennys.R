@@ -6,7 +6,7 @@ limit = 1000
 radius = 1000
 zipcode = 90210
 
-url = function(limit=limit, radius=radius, zip=zip)
+dennys_url = function(limit=1000, radius=1000, zip=90210)
 {    
     paste0('https://hosted.where2getit.com/dennys/responsive/ajax?&xml_request=',
            '<request>',
@@ -29,5 +29,5 @@ url = function(limit=limit, radius=radius, zip=zip)
            '<%2Frequest>')
 }
 
-download.file(url(zip=90210), file.path(data_dir, paste0(90210,".xml")))
-download.file(url(zip=27705), file.path(data_dir, paste0(27705,".xml")))
+download.file(dennys_url(zip=90210), file.path(data_dir, paste0(90210,".xml")))
+download.file(dennys_url(zip=27705), file.path(data_dir, paste0(27705,".xml")))
