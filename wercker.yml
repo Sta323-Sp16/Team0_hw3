@@ -14,7 +14,7 @@ build:
         name: Check make runs
         code: |
           make
-          Rscript -e "stopifnot(file.exists('hw2.html'))"
+          Rscript -e "stopifnot(file.exists('hw3.html'))"
     - script:
         name: Check make clean runs
         code: |
